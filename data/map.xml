@@ -24,7 +24,6 @@
         <exit dir="north" text="Mess hall" to="mess_hall" />
     </location>
     <location name="library_outside" text="Library">
-        <description></description>
         <exit dir="west" text="Promenade" to="promenade" />
     </location>
     <location name="mess_hall" text="Mess hall">

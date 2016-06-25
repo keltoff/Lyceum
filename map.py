@@ -9,7 +9,8 @@ class Map:
     def load(self, filename):
         xml = et.parse(filename)
         for l in xml.findall('location'):
-            loc = Location(l)
+            loc = self.locations.get(l.attrib['name'], Location())
+            loc.update(l)
             self.locations[loc.name] = loc
 
     def __getitem__(self, item):

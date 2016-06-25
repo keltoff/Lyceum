@@ -1,0 +1,17 @@
+<module>
+    <location name="library_outside" text="In front of the library">
+        <description>
+            The library building is low, old, and made of gray stone.
+            <if time="day">The windows are open.</if>
+            <if time="evening">There is light inside.</if>
+            <if time="night">The door is locked and there is dark inside.</if>
+        </description>
+        <exit dir="in" text="Inside" to="library" />
+    </location>
+    <location name="library" text="Inside library">
+        <description>You are inside the library. Shelves of books all around.
+            <if time="day/evening">The librarian is sitting behind her desk, looking over students.</if>
+        </description>
+        <exit dir="out" text="Outside" to="library_outside" />
+    </location>
+</module>

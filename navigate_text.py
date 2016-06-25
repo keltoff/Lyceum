@@ -1,7 +1,11 @@
 from map import Map
+import os
+
+datadir = 'data'
 
 map = Map()
-map.load('data/map.xml')
+for xml in os.listdir(datadir):
+    map.load(os.path.join(datadir, xml))
 
 loc = map['dorm_inside']
 
