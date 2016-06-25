@@ -23,7 +23,9 @@ while running:
     if cmd in ['q', 'quit', 'exit']:
         running = False
     elif cmd == 'go':
-        loc = map[loc.exits[command[1]].to]
-        if not loc:
+        target = loc.exits.get(command[1], None)
+        if target and map[target.to]:
+            loc = map[target.to]
+        else:
             print('That is not a place. You got lost and returned to the promenade')
             loc = map['promenade']
