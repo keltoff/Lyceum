@@ -1,0 +1,39 @@
+<map>
+    <location name="template" text="Template">
+        <description></description>
+        <exit dir="" text="" to="" />
+    </location>
+    <location name="dorm_inside" text="Dormitory">
+        <description>Inside the dorms. Posh rooms, nice carpets, long cold hallways.</description>
+        <exit dir="out" text="Outside" to="dorm_outside" />
+    </location>
+    <location name="dorm_outside" text="Outside dormitory">
+        <description>In from of the dorm building.</description>
+        <exit dir="in" text="Inside" to="dorm_inside" />
+        <exit dir="west" text="To the bridge" to="bridge" />
+    </location>
+    <location name="bridge" text="Bridge Corpus Callosum">
+        <description>Robust stone bridge over the river.</description>
+        <exit dir="east" text="Dorm building" to="dorm_outside" />
+        <exit dir="north" text="Promenade" to="promenade" />
+    </location>
+    <location name="promenade" text="Promenade">
+        <description></description>
+        <exit dir="south" text="Bridge" to="bridge" />
+        <exit dir="east" text="Library" to="library_outside" />
+        <exit dir="north" text="Mess hall" to="mess_hall" />
+    </location>
+    <location name="library_outside" text="Library">
+        <description></description>
+        <exit dir="west" text="Promenade" to="promenade" />
+    </location>
+    <location name="mess_hall" text="Mess hall">
+        <description></description>
+        <exit dir="out" text="Promenade" to="promenade" />
+        <exit dir="north" text="Ateliers" to="atelier_outside" />
+    </location>
+    <location name="atelier_outside" text="Ateliers">
+        <description></description>
+        <exit dir="south" text="Mess hall" to="mess_hall" />
+    </location>
+</map>
