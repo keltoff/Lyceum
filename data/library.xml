@@ -12,6 +12,17 @@
         <description>You are inside the library. Shelves of books all around.
             <if time="day/evening">The librarian is sitting behind her desk, looking over students.</if>
         </description>
+        <action verb="study" text="Catch up on your studies">
+            <time h="1" />
+            <gain education="1" />
+            <lose study_failing="5" />
+        </action>
+        <if mystery="any" noflag="research:library">
+            <action verb="research" text="Look up details of your current mystery">
+                <time h="1" />
+                <gain research="1" />
+            </action>
+        </if>
         <exit dir="out" text="Outside" to="library_outside" />
     </location>
 </module>

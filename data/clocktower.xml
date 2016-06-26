@@ -1,0 +1,28 @@
+<module>
+    <location name="promenade">
+        <action verb="look" text="Contemplate the watch tower">
+            The clock tower is standing in the river, near the promenade.
+            <switch context="clocktower_near" />
+        </action>
+    </location>
+    <context name="clocktower_near">
+        <contains name="clocktower" />
+        The tower is visible from all of the lyceum. Clockwork mechanism measures the time.
+        The tower stands in the middle of the river, with no obvious way inside.
+        <discover mystery="clocktower" value="1" hint="There is no door, no bridge. How to get inside?" />
+        <if time="night">
+            In the darkness, you can see a light flicker behind a window. Is someone there?
+            <discover mystery="clocktower" value="2" hint="Late in the night, there is someone moving inside. Who it is? How did they get there?" />
+        </if>
+    </context>
+    <context name="clocktower">
+        <action verb="check" text="Check the time">
+            Clock shows <var name="time" />.
+            <if time="morning">It is still morning.</if>
+            <if time="noon">It is still noon.</if>
+            <if time="afternoon">It is afternoon.</if>
+            <if time="evening">It's getting darker.</if>
+            <if time="night">It is the dead of the night.</if>
+        </action>
+    </context>
+</module>

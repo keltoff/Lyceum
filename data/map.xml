@@ -19,6 +19,7 @@
     </location>
     <location name="promenade" text="Promenade">
         <description></description>
+
         <exit dir="south" text="Bridge" to="bridge" />
         <exit dir="east" text="Library" to="library_outside" />
         <exit dir="north" text="Mess hall" to="mess_hall" />
