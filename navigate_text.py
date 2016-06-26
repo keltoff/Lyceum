@@ -29,3 +29,7 @@ while running:
         else:
             print('That is not a place. You got lost and returned to the promenade')
             loc = map['promenade']
+    elif cmd == 'jump':
+        target = map[command[1]]
+        if target:
+            loc = target
